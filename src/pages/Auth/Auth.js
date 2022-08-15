@@ -11,9 +11,43 @@ const Auth = () => {
           <h6>Explore the ideas throughout the world</h6>
         </div>
       </div>
-      <Signup></Signup>
+      {/* <Signup></Signup> */}
+      <Login></Login>
     </div>
   );
+
+  function Login() {
+    return (
+      <div className="a-right">
+        <form className="infoForm authForm">
+          <h3>Log In</h3>
+          <div>
+            <input
+              type="text"
+              placeholder="User Name"
+              className="infoInput"
+              name="username"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="password"
+              className="infoInput"
+              placeholder="Password"
+            />
+          </div>
+          <div>
+            <span>Don't have an account. Signup!</span>
+          </div>
+          <button className="button info-button" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    );
+  }
+
   function Signup() {
     return (
       <div className="a-right">
