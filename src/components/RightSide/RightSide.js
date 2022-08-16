@@ -1,12 +1,14 @@
-import React from 'react'
-import './RightSide.css'
-import Home from '../../assets/images/home.png'
-import Noti from '../../assets/images/noti.png'
-import Comment from '../../assets/images/comment.png'
-import { UilSetting } from '@iconscout/react-unicons'
-import TrendCard from '../TrendCard/TrendCard'
+import React, { useState } from "react";
+import "./RightSide.css";
+import Home from "../../assets/images/home.png";
+import Noti from "../../assets/images/noti.png";
+import Comment from "../../assets/images/comment.png";
+import { UilSetting } from "@iconscout/react-unicons";
+import TrendCard from "../TrendCard/TrendCard";
+import ShareModal from "../ShareModal/ShareModal";
 
 function RightSide() {
+  const [modalOpened, setModalOpened] = useState(false);
   return (
     <div className="RightSide">
       <div className="navIcons">
@@ -18,9 +20,15 @@ function RightSide() {
 
       <TrendCard />
 
-      <button className="button r-button">Share</button>
+      <button className="button r-button" onClick={() => setModalOpened(true)}>
+        Share
+      </button>
+      <ShareModal
+        modalOpened={modalOpened}
+        setModalOpened={setModalOpened}
+      ></ShareModal>
     </div>
-  )
+  );
 }
 
-export default RightSide
+export default RightSide;

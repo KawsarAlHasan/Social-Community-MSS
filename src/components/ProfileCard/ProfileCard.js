@@ -1,9 +1,11 @@
-import React from 'react'
-import Cover from '../../assets/images/cover.jpg'
-import Profile from '../../assets/images/profileImg.jpg'
-import './ProfileCard.css'
+import React from "react";
+import Cover from "../../assets/images/cover.jpg";
+import Profile from "../../assets/images/profileImg.jpg";
+import "./ProfileCard.css";
 
 function ProfileCard() {
+  const ProfilePage = true;
+
   return (
     <div className="ProfileCard">
       {/* profile images */}
@@ -29,12 +31,21 @@ function ProfileCard() {
             <span>41</span>
             <span>Followers</span>
           </div>
+          {ProfilePage && (
+            <>
+              <div className="vl"></div>
+              <div className="follow">
+                <span>3</span>
+                <span>Posts</span>
+              </div>
+            </>
+          )}
         </div>
         <hr />
       </div>
-      <span>My Profile</span>
+      {ProfilePage ? "" : <span>My Profile</span>}
     </div>
-  )
+  );
 }
 
-export default ProfileCard
+export default ProfileCard;
