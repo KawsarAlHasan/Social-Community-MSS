@@ -1,0 +1,45 @@
+.Chat {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22% auto;
+  gap: 1rem;
+}
+
+/* Left-side-chat */
+.Left-side-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--cardColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  height: auto;
+  min-height: 80vh;
+  overflow: scroll;
+}
+
+.Chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Right-side-chat */
+.Right-side-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* chat resposive  */
+@media screen and (max-width: 768px) {
+  .Chat {
+    grid-template-columns: 16% auto;
+  }
+}
