@@ -44,8 +44,8 @@ const Auth = () => {
       <div className="a-left">
         <img src={Logo} alt="" />
         <div className="Webname">
-          <h1>KMN Media</h1>
-          <h6>Explore the ideas throughout the world</h6>
+          <h1>Social Community</h1>
+          <h6>Explore the ideas throughout the world!</h6>
         </div>
       </div>
       <div className="a-right">

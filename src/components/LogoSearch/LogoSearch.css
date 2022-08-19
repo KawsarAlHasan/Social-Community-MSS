@@ -7,7 +7,6 @@
   height: 40px;
   width: 40px;
 }
-
 .Search {
   display: flex;
   background-color: var(--inputColor);
@@ -25,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(106.23deg, #f99827, #f95f35 100%);
+  background: linear-gradient(106.23deg, #145da0, #2e8bc0 100%);
   border-radius: 5px;
   padding: 4px;
   color: white;
