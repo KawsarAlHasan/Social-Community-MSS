@@ -7,13 +7,11 @@ import Share from "../../assets/images/share.png";
 import { useSelector } from "react-redux";
 
 function Post({ data }) {
+  const port = "http://localhost:5000/images/";
   const { user } = useSelector((state) => state.authReducer.authData);
   return (
     <div className="Post">
-      <img
-        src={data.img ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
-        alt="Are you ofline🙄"
-      />
+      <img src={data.image ? port + data.image : ""} alt="Are you ofline🙄" />
 
       <div className="postReact">
         <img src={data.liked ? Heart : NotLike} alt="" />
