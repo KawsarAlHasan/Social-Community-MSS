@@ -7,7 +7,7 @@ import Share from "../../assets/images/share.png";
 import { useSelector } from "react-redux";
 
 function Post({ data }) {
-  const port = "https://enigmatic-ocean-28315.herokuapp.com//images/";
+  const port = "https://enigmatic-ocean-28315.herokuapp.com/images/";
   const { user } = useSelector((state) => state.authReducer.authData);
   return (
     <div className="Post">
