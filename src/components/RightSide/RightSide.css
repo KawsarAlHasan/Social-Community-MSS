@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-.navIcons > img {
+.navIcons > a > img {
   width: 2.5rem;
   height: 2rem;
 }
