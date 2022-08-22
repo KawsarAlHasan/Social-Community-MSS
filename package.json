@@ -2,7 +2,7 @@
   "name": "sc-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://enigmatic-ocean-28315.herokuapp.com",
+  "proxy": "https://adanannaba.web.app",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@iconscout/react-unicons": "^1.1.6",
