@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { uploadImage, uploadPost } from "../../Action/UploadAction";
 
 function PostShare() {
+  const port = "https://enigmatic-ocean-28315.herokuapp.com/images/";
   const loading = useSelector((state) => state.postReducer.uploading);
   const [image, setImage] = useState(null);
   const imageRef = useRef();
@@ -50,7 +51,14 @@ function PostShare() {
   };
   return (
     <div className="PostShare">
-      <img src={Profile} alt="you are ofline🙄" />
+      <img
+        src={
+          user.coverPicture
+            ? port + user.profilePicture
+            : port + "defaultProfile.png"
+        }
+        alt="you are ofline🙄"
+      />
       <div>
         <input ref={desc} required type="text" placeholder="What's Happening" />
         {/* postOptions */}
