@@ -1,16 +1,11 @@
+import { UilLocationPoint, UilPlayCircle, UilScenery, UilSchedule, UilTimes } from '@iconscout/react-unicons'
 import React, { useRef, useState } from 'react'
-import Profile from '../../assets/images/profileImg.jpg'
-import { UilScenery } from '@iconscout/react-unicons'
-import { UilPlayCircle } from '@iconscout/react-unicons'
-import { UilLocationPoint } from '@iconscout/react-unicons'
-import { UilSchedule } from '@iconscout/react-unicons'
-import { UilTimes } from '@iconscout/react-unicons'
-import './PostShare.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { uploadImage, uploadPost } from '../../Action/UploadAction'
+import './PostShare.css'
 
 function PostShare() {
-  const port = 'http://localhost:5000/images/'
+  const port = 'https://enigmatic-ocean-28315.herokuapp.com/images/'
   const loading = useSelector((state) => state.postReducer.uploading)
   const [image, setImage] = useState(null)
   const imageRef = useRef()

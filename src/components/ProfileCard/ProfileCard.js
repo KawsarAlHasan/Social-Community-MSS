@@ -5,7 +5,7 @@ import './ProfileCard.css'
 
 function ProfileCard({ location }) {
   const { user } = useSelector((state) => state.authReducer.authData)
-  const port = 'http://localhost:5000/images/'
+  const port = 'https://enigmatic-ocean-28315.herokuapp.com/images/'
   const posts = useSelector((state) => state.postReducer.posts)
 
   return (
