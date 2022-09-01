@@ -6,7 +6,7 @@ import Home from "../../assets/images/home.png";
 import Noti from "../../assets/images/noti.png";
 import ShareModal from "../ShareModal/ShareModal";
 import TrendCard from "../TrendCard/TrendCard";
-import "./RightSide.css";
+import "./RightSide.css"
 
 function RightSide() {
   const [modalOpened, setModalOpened] = useState(false);
@@ -16,7 +16,7 @@ function RightSide() {
         <Link to="/home">
           <img src={Home} alt="" />
         </Link>
-        <Link to="/users">
+        <Link to="/setting">
           <UilSetting />
         </Link>
         <img src={Noti} alt="" />

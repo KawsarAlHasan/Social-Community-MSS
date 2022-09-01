@@ -1,10 +1,13 @@
 import { useSelector } from "react-redux/es/exports";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Users from "./pages/Admin.ja/Users";
+// import Users from "./pages/Admin/Users";
 import Auth from "./pages/Auth/Auth";
 import Home from "./pages/home/Home";
 import Profile from "./pages/Profile/Profile";
+import Setting from "./Setting/Setting";
+import Users from "./Setting/Users";
+import UserSetting from "./Setting/UserSetting";
 
 function App() {
   const user = useSelector((state) => state.authReducer.authData);
@@ -29,9 +32,17 @@ function App() {
           path="profile/:id"
           element={user ? <Profile /> : <Navigate to="../auth" />}
         />
-        <Route
+        {/* <Route
           path="users"
           element={user ? <Users /> : <Navigate to="../auth" />}
+        /> */}
+        <Route
+          path="setting"
+          element={user ? <Setting>
+            <Route index element={<UserSetting/>}></Route>
+            <Route path="/users" element={<Users/>}></Route>
+
+          </Setting> : <Navigate to="../auth" />}
         />
         {/* <Route path="/setting" element={<Setting>
           <Routes>

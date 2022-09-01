@@ -1,0 +1,36 @@
+.setting-container {
+    min-height: 100vh;
+    z-index: 200;
+}
+.setting-nav {
+    display: flex;
+    justify-content: center;
+}
+.dashboard {
+    display: grid;
+}
+.sidebar {
+    grid-column: 1;
+}
+.dashboard-content {
+    grid-column: 2 /span 6;
+}
+ul{
+    list-style: none;
+}
+.sidebar ul li{
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+}
+.sidebar ul li button {
+    border: none;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 20px 40px;
+    width: 20vh;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 20px;
+}
