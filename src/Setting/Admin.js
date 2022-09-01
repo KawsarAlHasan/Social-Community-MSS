@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./User.css";
+
 const Admin = () => {
   const [AllUser, setAllUser] = useState([]);
   useEffect(() => {

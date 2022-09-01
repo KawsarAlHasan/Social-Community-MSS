@@ -8,7 +8,7 @@ import UserSetting from './UserSetting';
 
 
 const Setting = () => {
-    const [element, setElement] = useState(<Admin/>)
+    const [element, setElement] = useState(<Users/>)
     return (
         <div className='setting-container'>
             <div className="setting-nav">
