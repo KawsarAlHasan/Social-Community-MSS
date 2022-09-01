@@ -3,7 +3,7 @@ import React from 'react';
 const UserSetting = () => {
     return (
         <div>
-            <h1>This is user setting </h1>
+            <h1>user profile setting is loading...</h1>
         </div>
     );
 };

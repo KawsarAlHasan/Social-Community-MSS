@@ -32,23 +32,25 @@ const Users = () => {
       <h2>All Users</h2>
       <table>
         <tr>
-          <th>Name</th>
-          <th>User Name</th>
-          <th>Admin/user</th>
-          <th>Make/delete Admin</th>
-          <th>Delete</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>User name/Email</th>
+          <th>Followers</th>
+          <th>Following</th>
+          <th>joined</th>
+          <th>Updated</th>
         </tr>
         {AllUser.map((user, index) => (
           <tr key={index}>
             <td>
-              {user?.firstname} {user?.lastname}
+              {user?.firstname}
             </td>
+            <td> {user?.lastname}</td>
             <td>{user?.username}</td>
-            <td>{user?.isAdmin === true ? "Admin" : "User"}</td>
-            <td>{user?.isAdmin === true ? "Delete Admin" : "Make Admin"}</td>
-            <td>
-              <button onClick={() => deleteUser(user._id, user.username)}>Delete</button>
-            </td>
+            <td>{user.followers.length}</td>
+            <td>{user.following.length}</td>
+            <td>{user.createdAt}</td>
+            <td>{user.updatedAt}</td>
           </tr>
         ))}
       </table>

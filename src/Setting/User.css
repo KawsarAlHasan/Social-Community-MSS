@@ -14,4 +14,11 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
   
+tr td button {
+    padding: 5px 10px;
+    background: rgb(179, 31, 31);
+    color: #dddddd;
+
+}

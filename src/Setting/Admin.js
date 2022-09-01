@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./admin.css";
-const Users = () => {
+import "./User.css";
+const Admin = () => {
   const [AllUser, setAllUser] = useState([]);
   useEffect(() => {
     const uri = "https://enigmatic-ocean-28315.herokuapp.com/user";
@@ -56,4 +56,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Admin;
