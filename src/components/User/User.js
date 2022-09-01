@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { followUser, unfollowUser } from '../../api/UserRequest'
 
 function User({ person }) {
-  const port = 'http://localhost:5000/images/'
+  const port = 'https://enigmatic-ocean-28315.herokuapp.com/images/'
 
   const { user } = useSelector((state) => state.authReducer.authData)
   const dispatch = useDispatch()

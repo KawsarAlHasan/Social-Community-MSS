@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import './Post.css'
-import Heart from '../../assets/images/like.png'
-import NotLike from '../../assets/images/notlike.png'
-import Comment from '../../assets/images/comment.png'
-import Share from '../../assets/images/share.png'
 import { useSelector } from 'react-redux'
 import { likePost } from '../../api/postRequest'
+import Comment from '../../assets/images/comment.png'
+import Heart from '../../assets/images/like.png'
+import NotLike from '../../assets/images/notlike.png'
+import Share from '../../assets/images/share.png'
+import './Post.css'
 
 function Post({ data }) {
-  const port = 'http://localhost:5000/images/'
+  const port = 'https://enigmatic-ocean-28315.herokuapp.com/images/'
   const { user } = useSelector((state) => state.authReducer.authData)
 
   const [liked, setLiked] = useState(data.likes.includes(user._id))
