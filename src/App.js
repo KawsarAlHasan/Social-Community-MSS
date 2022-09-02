@@ -7,6 +7,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme, GlobalStyle } from './components/Theme/Themes'
+import Chat from './pages/Chat/Chat'
 
 const StyleApp = styled.div`
   color: ${(props) => props.theme.fontColor};
@@ -49,6 +50,10 @@ function App() {
             <Route
               path="profile/:id"
               element={user ? <Profile /> : <Navigate to="../auth" />}
+            />
+            <Route
+              path="chat"
+              element={user ? <Chat /> : <Navigate to="../auth" />}
             />
           </Routes>
         </div>
