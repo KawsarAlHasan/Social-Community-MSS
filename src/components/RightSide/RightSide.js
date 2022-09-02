@@ -1,25 +1,14 @@
 import React, { useState } from 'react'
 import './RightSide.css'
-import Home from '../../assets/images/home.png'
-import Noti from '../../assets/images/noti.png'
-import Comment from '../../assets/images/comment.png'
-import { UilSetting } from '@iconscout/react-unicons'
 import TrendCard from '../TrendCard/TrendCard'
 import ShareModal from '../ShareModal/ShareModal'
-import { Link } from 'react-router-dom'
+import NavIcons from '../NavIcons/NavIcons'
 
 function RightSide() {
   const [modalOpened, setModalOpened] = useState(false)
   return (
     <div className="RightSide">
-      <div className="navIcons">
-        <Link to="../home">
-          <img src={Home} alt="" />
-        </Link>
-        <UilSetting />
-        <img src={Noti} alt="" />
-        <img src={Comment} alt="" />
-      </div>
+      <NavIcons />
 
       <TrendCard />
 

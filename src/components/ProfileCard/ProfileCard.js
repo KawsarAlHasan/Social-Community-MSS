@@ -54,7 +54,7 @@ function ProfileCard({ location }) {
               <div className="vl"></div>
               <div className="follow">
                 <span>
-                  {posts.filter((post) => post.userId == user._id).length}
+                  {posts.filter((post) => post.userId === user._id).length}
                 </span>
                 <span>Posts</span>
               </div>
